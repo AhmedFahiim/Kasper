@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="we are unyki agency">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link favicon -->
+    <link rel="icon" href="images/fav.png">
     <!-- Css sheet link -->
     <link rel="stylesheet" href="css/Main.css">
     <!--Font awsome link -->
@@ -17,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;1,100;1,600&display=swap"
         rel="stylesheet">
-    <title>Template 2</title>
+    <title>Kasper</title>
 </head>
 <body>
     <!-- start header -->
@@ -36,11 +38,17 @@
                     <li> <a href="#Pricing">pricing</a></li>
                     <li> <a href="#Contact">contact</a></li>
                 </ul>
-                <div class="form">
+                <div class="form" id="search-now">
                     <i class="fas fa-search"></i>
                 </div>
             </nav>
 
+        </div>
+        <div class="search-popup" id="search-pop">
+            <span id="close-pop">X</span>
+        <div class="input-holder">
+            <input type="text" placeholder="Type Here.."/>
+        </div>
         </div>
     </header>
     <!-- end header -->
@@ -55,9 +63,9 @@
                 </div>
             </div>
             <div class="bulltes">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bullet"></span>
+                <span class="bullet active"></span>
+                <span class="bullet"></span>
             </div>
             <i class="fa-solid fa-angle-right"></i>
             <i class="fa-solid fa-angle-left"></i>
@@ -136,11 +144,11 @@
                     voluptatem. Repudiandae.</p>
             </div>
             <ul class="shuffle">
-                <li class="active">all</li>
-                <li>app</li>
-                <li>photography</li>
-                <li>web</li>
-                <li>print</li>
+                <li class="tab-item active">all</li>
+                <li class="tab-item">app</li>
+                <li class="tab-item">photography</li>
+                <li class="tab-item">web</li>
+                <li class="tab-item">print</li>
             </ul>
         </div>
         <div class="imgs-container" id="shuffle">
@@ -201,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <button>More</button>
+        <button class="portfolio-more">More</button>
     </section>
     <div class="port-video">
         <video src="/videos/awesome-video.mp4" autoplay muted loop></video>
@@ -263,9 +271,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quam facere.</p>
                 </div>
                 <div class="bullets-box">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="bullet"></span>
+                    <span class="bullet active"></span>
+                    <span class="bullet"></span>
                 </div>
             </div>
             <div class="skills-col">
@@ -450,7 +458,7 @@
             </div>
         </div>
         <div class="right-reserved">
-            <p> &#169; 2022 - <span>Fahiim</span> All Right Reserved</p>
+            <p> &#169; 2022 - <span>FAHII.M</span> All Right Reserved</p>
         </div>
     </footer>
     <script src="main.js"></script>
