@@ -24,19 +24,19 @@
 <body>
     <!-- start header -->
     <header>
-        <div class="container" id="Home">
+        <div class="container">
             <a href="#Home">
                 <img src="images/logo.png" alt="Logo">
             </a>
             <nav>
-                <i class="fa-solid fa-bars toggle"></i>
+                <i class="fa-solid fa-bars" id="burger"></i>
                 <ul>
-                    <li> <a class="active" href="#Home">home</a></li>
-                    <li> <a href="#Services">services</a></li>
-                    <li> <a href="#Portfolio">portfolio</a></li>
-                    <li> <a href="#About">about</a></li>
-                    <li> <a href="#Pricing">pricing</a></li>
-                    <li> <a href="#Contact">contact</a></li>
+                    <li> <a class="nav-item active"  href="#Home">home</a></li>
+                    <li> <a class="nav-item" href="#Services">services</a></li>
+                    <li> <a class="nav-item" href="#Portfolio">portfolio</a></li>
+                    <li> <a class="nav-item" href="#About">about</a></li>
+                    <li> <a class="nav-item" href="#Pricing">pricing</a></li>
+                    <li> <a class="nav-item" href="#Contact">contact</a></li>
                 </ul>
                 <div class="form" id="search-now">
                     <i class="fas fa-search"></i>
@@ -53,7 +53,7 @@
     </header>
     <!-- end header -->
     <!-- start landing page -->
-    <div class="landing">
+    <div class="landing"  id="Home">
         <div class="over-lay">
             <div class="text-box">
                 <div class="text-content">
@@ -458,7 +458,7 @@
             </div>
         </div>
         <div class="right-reserved">
-            <p> &#169; 2022 - <span>FAHII.M</span> All Right Reserved</p>
+            <p> &#169; 2022 - <a href="https://portfolio-ahmedfahiim.vercel.app/">FAHII.M</a> All Right Reserved</p>
         </div>
     </footer>
     <script src="main.js"></script>

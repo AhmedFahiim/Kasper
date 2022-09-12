@@ -31,3 +31,31 @@ tabItems.forEach((e) => {
     a.currentTarget.classList.add("active");
   };
 });
+
+// display nav on mobile
+let burgerIcon = document.getElementById("burger");
+burgerIcon.onclick = () => {
+  burgerIcon.classList.toggle("toggle");
+};
+
+// change active link onclick
+let links = document.querySelectorAll(".nav-item");
+
+links.forEach((e) => {
+  e.addEventListener("click", (event) => {
+    links.forEach((ele) => {
+      ele.classList.remove("active");
+    });
+    event.currentTarget.classList.add("active");
+  });
+});
+
+// change the position of header while scrolling
+
+let headerTag = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 1000) {
+    headerTag.classList.add("scrolling");
+  } else headerTag.classList.remove("scrolling");
+});

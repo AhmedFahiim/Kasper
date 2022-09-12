@@ -92,8 +92,11 @@ html {
 /* Start header */
 header {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 1;
+  transition: 1s;
 }
 header .container {
   position: relative;
@@ -101,6 +104,14 @@ header .container {
   justify-content: space-between;
   align-items: center;
   min-height: 97px;
+}
+header.scrolling {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  background-color: #222;
 }
 header .container::after {
   content: "";
@@ -115,12 +126,13 @@ header .container::after {
 header .container img {
   height: 40px;
 }
-.container nav .toggle {
+.container nav #burger {
   color: white;
   font-size: 20px;
+  cursor: pointer;
 }
 @media (min-width: 767px) {
-  .container nav .toggle {
+  .container nav #burger {
     display: none;
   }
 }
@@ -218,7 +230,7 @@ header .search-popup .input-holder input::placeholder {
 }
 /* start small screens */
 @media (max-width: 991px) {
-  .container nav .toggle {
+  .container nav #burger {
     display: block;
     font-size: 22px;
   }
@@ -237,16 +249,23 @@ header .search-popup .input-holder input::placeholder {
     margin: 0;
     text-align: center;
   }
-  .container nav .toggle:hover + ul {
+  .container nav #burger.toggle + ul {
     top: 100%;
     visibility: visible;
     opacity: 1;
+  }
+  header .search-popup .input-holder input {
+    width: 85%;
+  }
+  header .search-popup .input-holder input,
+  header .search-popup .input-holder input::placeholder {
+    font-size: 30px;
   }
 }
 /* end header */
 /* start landing */
 .landing {
-  height: 95vh;
+  height: 100vh;
   background-image: url(../images/landing.jpg);
   background-size: cover;
   position: relative;
@@ -462,6 +481,7 @@ header .search-popup .input-holder input::placeholder {
   position: relative;
   overflow: hidden;
   transition: 0.5s;
+  cursor: pointer;
 }
 .portfolio .imgs-container .box img {
   width: 100%;
@@ -951,7 +971,7 @@ header .search-popup .input-holder input::placeholder {
   padding: 10px 40px;
   background-color: transparent;
   border: 1px solid white;
-  border-right: none;
+  border-right-color: transparent;
   color: #fff;
 }
 .subscribe form .mail:focus {
@@ -977,6 +997,20 @@ header .search-popup .input-holder input::placeholder {
 .subscribe form .mail::placeholder {
   color: white;
   font-size: smaller;
+}
+/* small screens */
+@media (max-width: 767px) {
+  .subscribe form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .subscribe form .mail {
+    border-right-color: white;
+  }
+  .subscribe form i {
+    top: 21px;
+    left: 15px;
+  }
 }
 /* med screens */
 @media (min-width: 992px) {
@@ -1141,6 +1175,7 @@ footer .right-reserved {
 footer .right-reserved p {
   color: white;
 }
-footer .right-reserved span {
+footer .right-reserved a {
   color: var(--main-color);
+  text-decoration: none;
 }
